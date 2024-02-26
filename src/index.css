@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HACK: scope tailwind preflight to prevent collision. https://dev.to/ajscommunications/scoping-normalized-preflight-css-c29.  */
+
+:where(.preflight) {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --border-color: rgb(209 213 219);
+  --placeholder-color: rgb(156 163 175);
+}
+:where(.preflight) *,
+:where(.preflight) ::before,
+:where(.preflight) ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+:where(.preflight)  {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: var(--font-sans);
+}
+:where(.preflight)  {
+  margin: 0;
+  line-height: inherit;
+}
+:where(.preflight) hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+:where(.preflight) abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+:where(.preflight) h1,
+:where(.preflight) h2,
+:where(.preflight) h3,
+:where(.preflight) h4,
+:where(.preflight) h5,
+:where(.preflight) h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.preflight) a {
+  color: inherit;
+  text-decoration: inherit;
+}
+:where(.preflight) b,
+:where(.preflight) strong {
+  font-weight: bolder;
+}
+:where(.preflight) code,
+:where(.preflight) kbd,
+:where(.preflight) samp,
+:where(.preflight) pre {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+:where(.preflight) small {
+  font-size: 80%;
+}
+:where(.preflight) sub,
+:where(.preflight) sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+:where(.preflight) sub {
+  bottom: -0.25em;
+}
+:where(.preflight) sup {
+  top: -0.5em;
+}
+:where(.preflight) table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+:where(.preflight) button,
+:where(.preflight) input,
+:where(.preflight) optgroup,
+:where(.preflight) select,
+:where(.preflight) textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+:where(.preflight) button,
+:where(.preflight) select {
+  text-transform: none;
+}
+:where(.preflight) button,
+:where(.preflight) [type='button'],
+:where(.preflight) [type='reset'],
+:where(.preflight) [type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+:where(.preflight) :-moz-focusring {
+  outline: auto;
+}
+:where(.preflight) :-moz-ui-invalid {
+  box-shadow: none;
+}
+:where(.preflight) progress {
+  vertical-align: baseline;
+}
+:where(.preflight) ::-webkit-inner-spin-button,
+:where(.preflight) ::-webkit-outer-spin-button {
+  height: auto;
+}
+:where(.preflight) [type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+:where(.preflight) ::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+:where(.preflight) ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+:where(.preflight) summary {
+  display: list-item;
+}
+:where(.preflight) blockquote,
+:where(.preflight) dl,
+:where(.preflight) dd,
+:where(.preflight) h1,
+:where(.preflight) h2,
+:where(.preflight) h3,
+:where(.preflight) h4,
+:where(.preflight) h5,
+:where(.preflight) h6,
+:where(.preflight) hr,
+:where(.preflight) figure,
+:where(.preflight) p,
+:where(.preflight) pre {
+  margin: 0;
+}
+:where(.preflight) fieldset {
+  margin: 0;
+  padding: 0;
+}
+:where(.preflight) legend {
+  padding: 0;
+}
+:where(.preflight) ol,
+:where(.preflight) ul,
+:where(.preflight) menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:where(.preflight) textarea {
+  resize: vertical;
+}
+:where(.preflight) input::placeholder,
+:where(.preflight) textarea::placeholder {
+  opacity: 1;
+  color: var(--placeholder-color);
+}
+:where(.preflight) button,
+:where(.preflight) [role="button"] {
+  cursor: pointer;
+}
+:where(.preflight) :disabled {
+  cursor: default;
+}
+:where(.preflight) img,
+:where(.preflight) svg,
+:where(.preflight) video,
+:where(.preflight) canvas,
+:where(.preflight) audio,
+:where(.preflight) iframe,
+:where(.preflight) embed,
+:where(.preflight) object {
+  display: block;
+  vertical-align: middle;
+}
+:where(.preflight) img,
+:where(.preflight) video {
+  max-width: 100%;
+  height: auto;
+}
+:where(.preflight) [hidden] {
+  display: none;
+}
